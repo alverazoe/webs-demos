@@ -1,0 +1,429 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nido Villa Patricia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Nido y guardería Villa Patricia en San Miguel: estimulación temprana, maestras cariñosas y horario de 7:00 a 18:00. Matrícula 2027: agenda tu visita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: cálido y juguetón. Crema + coral, celeste, amarillo y verde menta; formas redondas e ilustraciones SVG (sin fotos de niños). Carril de 1140px. */
+:root {
+  --cream: #f7f4ff; --paper: #ffffff; --ink: #2d2a4a; --muted: #6b6788;
+  --coral: #7b6cf0; --coral-d: #5d4fd1; --sky: #59b8f0; --sky-l: #dff1fc;
+  --sun: #ffc93d; --sun-l: #fff1c7; --mint: #47c49a; --mint-l: #daf5ea; --lilac: #a48cf0; --lilac-l: #ece6fd;
+  --line: #e6e0f7;
+  --f-head: "Fredoka", "Baloo 2", "Trebuchet MS", sans-serif;
+  --f-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-head); font-weight: 600; line-height: 1.08; margin: 0; }
+h2 { font-size: clamp(32px, 4.6vw, 50px); text-wrap: balance; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 13.5px; letter-spacing: .04em; }
+.pill.sun { background: var(--sun-l); color: #8a5b00; }
+.pill.sky { background: var(--sky-l); color: #11618f; }
+.pill.mint { background: var(--mint-l); color: #18744f; }
+.pill.lilac { background: var(--lilac-l); color: #5536b0; }
+section.block { padding-block: 84px; }
+.head { text-align: center; max-width: 680px; margin: 0 auto 44px; display: grid; gap: 14px; justify-items: center; }
+.head p { margin: 0; color: var(--muted); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; font-family: var(--f-head); font-weight: 600; font-size: 18px; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background-color .15s; }
+.btn:hover { transform: translateY(-3px); }
+.btn.coral { background: var(--coral); color: #fff; box-shadow: 0 6px 0 var(--coral-d); }
+.btn.coral:hover { box-shadow: 0 9px 0 var(--coral-d); }
+.btn.white { background: #fff; color: var(--ink); box-shadow: 0 6px 0 #ead9c1; }
+.btn.sm { min-height: 42px; font-size: 16px; padding: 0 18px; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.btn:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+
+/* Header */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--cream); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: rgba(247,244,255,.92); backdrop-filter: blur(10px); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand svg { width: 44px; height: 44px; flex: none; }
+.brand b { font-family: var(--f-head); font-weight: 700; font-size: 28px; line-height: 1; letter-spacing: .01em; }
+.brand b .c1 { color: var(--coral); } .brand b .c2 { color: var(--sky); } .brand b .c3 { color: var(--sun); } .brand b .c4 { color: var(--mint); }
+.brand small { display: block; font-size: 11.5px; font-weight: 800; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
+nav.links { display: flex; gap: 26px; font-weight: 700; font-size: 15.5px; }
+nav.links a { text-decoration: none; padding: 6px 2px; border-bottom: 3px solid transparent; }
+nav.links a:hover { border-color: var(--sun); }
+@media (max-width: 900px) { nav.links { display: none; } }
+@media (max-width: 400px) { .brand small { display: none; } .top .btn { padding: 0 14px; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding-block: 40px 90px; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: clamp(42px, 5.4vw, 66px); margin: 18px 0 0; }
+.hero h1 .hl { color: #ff8a65; position: relative; white-space: nowrap; }
+.hero h1 .hl::after { content: ""; position: absolute; left: 0; right: 0; bottom: .02em; height: .2em; background: var(--sun); border-radius: 99px; z-index: -1; opacity: .8; }
+.hero p.lead { font-size: 19px; color: var(--muted); max-width: 44ch; margin: 20px 0 30px; }
+.cta { display: flex; flex-wrap: wrap; gap: 14px; }
+.trust { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.trust a, .trust span.t { display: inline-flex; align-items: center; gap: 10px; background: #fff; border-radius: 18px; padding: 10px 16px; text-decoration: none; box-shadow: 0 4px 0 var(--line); font-weight: 700; font-size: 15px; }
+.trust .st { color: #f4a300; letter-spacing: 1px; }
+.art { position: relative; aspect-ratio: 1; max-width: 520px; justify-self: center; width: 100%; }
+.art svg { width: 100%; height: 100%; overflow: visible; }
+.float { animation: bob 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.float.d2 { animation-delay: -1.6s; } .float.d3 { animation-delay: -3.2s; }
+@keyframes bob { 50% { transform: translateY(-12px) rotate(3deg); } }
+.blob { position: absolute; border-radius: 50%; filter: blur(2px); z-index: -1; }
+@media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } .art { max-width: 380px; } }
+
+/* Matrícula banner */
+.enroll { background: var(--coral); color: #fff; border-radius: 32px; padding: 32px 36px; display: grid; grid-template-columns: auto 1fr auto; gap: 18px 28px; align-items: center; position: relative; overflow: hidden; margin-top: -40px; box-shadow: 0 16px 34px rgba(232,96,79,.3); }
+.enroll .big { font-family: var(--f-head); font-weight: 700; font-size: 64px; line-height: .9; }
+.enroll h3 { font-size: 28px; }
+.enroll p { margin: 4px 0 0; color: #ffe3dd; }
+.enroll::after { content: ""; position: absolute; right: -40px; top: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,.12); }
+@media (max-width: 760px) { .enroll { grid-template-columns: 1fr; padding: 28px 24px; } .enroll .big { font-size: 52px; } }
+
+/* Pilares */
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.pillar { background: #fff; border-radius: 28px; padding: 28px; display: grid; gap: 12px; align-content: start; box-shadow: 0 6px 0 var(--line); transition: transform .25s ease; }
+.pillar:hover { transform: translateY(-6px) rotate(-.5deg); }
+.pillar .ic { width: 64px; height: 64px; border-radius: 22px; display: grid; place-items: center; }
+.pillar .ic svg { width: 34px; height: 34px; }
+.pillar h3 { font-size: 24px; }
+.pillar p { margin: 0; color: var(--muted); font-size: 16px; }
+@media (max-width: 900px) { .pillars { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .pillars { grid-template-columns: 1fr; } }
+
+/* Aulas */
+.levels { background: var(--paper); border-radius: 48px 48px 0 0; }
+.lvl-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.lvl { border-radius: 26px; padding: 26px 22px; display: grid; gap: 8px; text-align: center; justify-items: center; }
+.lvl .age { font-family: var(--f-head); font-weight: 700; font-size: 46px; line-height: 1; }
+.lvl .age small { font-size: 18px; }
+.lvl h3 { font-size: 20px; }
+.lvl p { margin: 0; font-size: 15px; color: var(--ink); opacity: .75; }
+.lvl.a { background: var(--sun-l); } .lvl.a .age { color: #d99400; }
+.lvl.b { background: var(--sky-l); } .lvl.b .age { color: #1f8fd1; }
+.lvl.c { background: var(--mint-l); } .lvl.c .age { color: #1f9c71; }
+.lvl.d { background: var(--lilac-l); } .lvl.d .age { color: #7a5be0; }
+.note { text-align: center; color: var(--muted); font-size: 14px; margin: 22px 0 0; }
+@media (max-width: 900px) { .lvl-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Familias */
+.families { background: var(--paper); padding-top: 0; }
+.fam { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: stretch; }
+.fam-card { border-radius: 32px; padding: 32px; display: grid; gap: 16px; align-content: start; }
+.fam-card.sky { background: var(--sky); color: #fff; }
+.fam-card.sun { background: var(--sun); color: #3d2b00; }
+.fam-card h3 { font-size: 30px; }
+.fam-card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.fam-card li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; font-weight: 600; }
+.fam-card li::before { content: "★"; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.3); font-size: 14px; }
+@media (max-width: 760px) { .fam { grid-template-columns: 1fr; } .fam-card { padding: 26px; } }
+
+/* Reseñas */
+.rv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.rv { background: #fff; border-radius: 28px; padding: 26px; display: grid; gap: 16px; align-content: space-between; box-shadow: 0 6px 0 var(--line); position: relative; }
+.rv:nth-child(1) { border-top: 6px solid var(--coral); } .rv:nth-child(2) { border-top: 6px solid var(--sky); } .rv:nth-child(3) { border-top: 6px solid var(--mint); }
+.rv .st { color: #f4a300; letter-spacing: 2px; }
+.rv p { margin: 0; font-size: 17px; }
+.rv footer { font-weight: 800; font-size: 14px; color: var(--muted); }
+.rate-cta { margin: 28px auto 0; max-width: 760px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; text-align: center; background: var(--ink); color: #fff; border-radius: 26px; padding: 20px 24px; }
+.rate-cta a.stars { font-size: 32px; letter-spacing: 4px; color: var(--sun); text-decoration: none; transition: transform .15s; }
+.rate-cta a.stars:hover { transform: scale(1.06); }
+.rate-cta p { margin: 0; }
+@media (max-width: 900px) { .rv-grid { grid-template-columns: 1fr; } }
+
+/* Visita */
+.visit { background: var(--mint-l); border-radius: 48px; margin-inline: max(0px, calc((100vw - 1240px) / 2)); }
+.book { display: grid; grid-template-columns: .95fr 1.05fr; gap: 36px; align-items: start; }
+.book .info { display: grid; gap: 18px; }
+.book .info p { margin: 0; color: #335c4e; }
+.facts { display: grid; gap: 12px; }
+.fact { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; background: #fff; border-radius: 18px; padding: 12px 14px; font-weight: 700; }
+.fact span.i { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--mint); color: #fff; }
+.fact span.i svg { width: 22px; height: 22px; }
+.fact small { display: block; font-weight: 600; color: var(--muted); font-size: 14px; }
+form.booker { background: #fff; border-radius: 32px; padding: 28px; display: grid; gap: 16px; box-shadow: 0 8px 0 #bfe8d8; }
+form.booker h3 { font-size: 28px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label, .field legend { font-weight: 800; font-size: 14px; color: var(--muted); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+select, input[type=text], input[type=date] { width: 100%; min-height: 50px; padding: 0 14px; border-radius: 16px; border: 2px solid #ecdfcc; background: var(--cream); color: var(--ink); font: inherit; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips label { font-weight: 700; font-size: 15px; color: var(--ink); }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips span { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 999px; border: 2px solid #ecdfcc; cursor: pointer; background: var(--cream); }
+.chips input:checked + span { background: var(--sun); border-color: var(--sun); }
+.chips input:focus-visible + span { outline: 3px solid var(--sky); outline-offset: 2px; }
+.preview { font-size: 14.5px; background: #e4f7ec; color: #1d4433; border-radius: 18px 18px 18px 4px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 860px) { .book { grid-template-columns: 1fr; } .visit { border-radius: 36px; } }
+@media (max-width: 420px) { .two { grid-template-columns: 1fr; } form.booker { padding: 22px; } }
+
+/* Pie */
+footer.site { padding-block: 52px 110px; }
+.foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 26px; align-items: start; }
+.foot h4 { margin: 0 0 6px; font-family: var(--f-head); font-weight: 600; font-size: 18px; }
+.foot p { margin: 0; color: var(--muted); }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--coral); }
+.legal { margin-top: 30px; padding-top: 18px; border-top: 2px dashed var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); }
+.demo { font-weight: 800; color: var(--coral); letter-spacing: .06em; }
+@media (max-width: 760px) { .foot { grid-template-columns: 1fr; } }
+
+/* Movimiento */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
+.reveal.in, .no-js .reveal { opacity: 1; transform: none; }
+.reveal[data-split] { opacity: 1; transform: none; }
+.hero-copy > * { animation: pop .8s cubic-bezier(.2,.8,.2,1) both; }
+.hero-copy > *:nth-child(2) { animation-delay: .08s; } .hero-copy > *:nth-child(3) { animation-delay: .16s; } .hero-copy > *:nth-child(4) { animation-delay: .24s; } .hero-copy > *:nth-child(5) { animation-delay: .32s; }
+@keyframes pop { from { opacity: 0; transform: translateY(20px) scale(.98); } }
+
+.fab { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 8; width: 60px; height: 60px; border-radius: 50%; background: #25d366; color: #0b2e17; display: grid; place-items: center; box-shadow: 0 10px 24px rgba(45,42,74,.25); text-decoration: none; }
+.fab svg { width: 30px; height: 30px; }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Nido Villa Patricia, inicio">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#ffc93d"/><circle cx="17" cy="21" r="3" fill="#2d2a4a"/><circle cx="31" cy="21" r="3" fill="#2d2a4a"/><path d="M15 29c4 5 14 5 18 0" stroke="#2d2a4a" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="12" cy="28" r="3" fill="#ff7a6b" opacity=".6"/><circle cx="36" cy="28" r="3" fill="#ff7a6b" opacity=".6"/></svg>
+      <span><b><span class="c1">Villa</span> <span class="c4">Patricia</span></b><small>Nido y guardería · San Miguel</small></span>
+    </a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#familias">Familias</a>
+      <a href="#resenas">Reseñas</a>
+    </nav>
+    <a class="btn coral sm" href="#visita">Agendar visita</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="pill sun">🎒 Matrícula 2027 · Guardería 7:00–18:00</span>
+        <h1>Crecen con amor, aprenden <span class="hl">jugando</span>.</h1>
+        <p class="lead">Nido y guardería en San Miguel con estimulación temprana, maestras cariñosas e instalaciones amplias. Horario extendido para papás que trabajan.</p>
+        <div class="cta">
+          <a class="btn coral" href="#visita">Agenda una visita</a>
+          <a class="btn white" href="#nosotros">Conócenos</a>
+        </div>
+        <div class="trust">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJdUVsL4vJBZERxHXVcircs_c" target="_blank" rel="noopener"><span class="st">★★★★★</span> 5,0 en Google</a>
+          <span class="t">⏰ Lunes a viernes de 7:00 a 18:00</span>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <span class="blob" style="width:70%;height:70%;left:15%;top:12%;background:#ffe2b8"></span>
+        <svg viewBox="0 0 400 400">
+          <!-- casita -->
+          <g class="float">
+            <path d="M80 210 L200 110 L320 210 Z" fill="#ff7a6b"/>
+            <rect x="100" y="205" width="200" height="140" rx="18" fill="#fff"/>
+            <rect x="178" y="265" width="44" height="80" rx="20" fill="#59b8f0"/>
+            <rect x="122" y="232" width="40" height="40" rx="10" fill="#ffc93d"/>
+            <rect x="238" y="232" width="40" height="40" rx="10" fill="#47c49a"/>
+            <circle cx="200" cy="175" r="14" fill="#fff"/>
+          </g>
+          <!-- sol -->
+          <g class="float d2"><circle cx="330" cy="70" r="34" fill="#ffc93d"/><circle cx="320" cy="64" r="4" fill="#2d2a4a"/><circle cx="340" cy="64" r="4" fill="#2d2a4a"/><path d="M318 78c6 7 18 7 24 0" stroke="#2d2a4a" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+          <!-- nube -->
+          <g class="float d3"><path d="M40 110a24 24 0 0 1 40-18 30 30 0 0 1 56 12 20 20 0 0 1-4 40H52a22 22 0 0 1-12-34Z" fill="#fff"/></g>
+          <!-- bloques -->
+          <g class="float d2"><rect x="30" y="300" width="56" height="56" rx="12" fill="#a48cf0"/><text x="58" y="340" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="34" fill="#fff">A</text></g>
+          <g class="float"><rect x="316" y="296" width="56" height="56" rx="12" fill="#59b8f0" transform="rotate(10 344 324)"/><text x="344" y="336" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="34" fill="#fff" transform="rotate(10 344 324)">1</text></g>
+          <!-- estrella -->
+          <path class="float d3" d="M70 200l8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3Z" fill="#ffc93d"/>
+          <!-- globo -->
+          <g class="float d2"><ellipse cx="300" cy="150" rx="22" ry="27" fill="#47c49a"/><path d="M300 177c-4 20 6 30 0 50" stroke="#2d2a4a" stroke-width="2" fill="none"/></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="enroll reveal">
+      <span class="big">2027</span>
+      <div><h3>Matrícula abierta</h3><p>Ven a conocer el nido con tu peque. Agenda tu visita en un minuto por WhatsApp.</p></div>
+      <a class="btn white" href="#visita">Quiero visitar</a>
+    </div>
+  </div>
+
+  <section class="block" id="nosotros">
+    <div class="wrap">
+      <div class="head">
+        <span class="pill sky">Por qué Villa Patricia</span>
+        <h2>Lo que más valoran nuestras familias</h2>
+        <p>Así lo cuentan en sus reseñas de Google.</p>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar"><span class="ic" style="background:var(--coral)"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11Z"/></svg></span><h3>Cuidado con amor</h3><p>Maestras atentas al bienestar de cada niño y una directora cercana a todas las familias.</p></div>
+        <div class="pillar"><span class="ic" style="background:var(--sky)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21c.8-4 3.6-6 7-6s6.2 2 7 6"/></svg></span><h3>Estimulación temprana</h3><p>Aprenden jugando desde muy pequeños, y también el valor de la amistad.</p></div>
+        <div class="pillar"><span class="ic" style="background:var(--mint)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span><h3>Espacios amplios y bonitos</h3><p>Instalaciones amplias y seguras para que exploren y jueguen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block levels" id="aulas">
+    <div class="wrap">
+      <div class="head">
+        <span class="pill sun">Aulas</span>
+        <h2>Un espacio para cada etapa</h2>
+        <p>Grupos pequeños según la edad, para acompañar a cada niño a su ritmo.</p>
+      </div>
+      <div class="lvl-grid reveal">
+        <div class="lvl a"><span class="age">1<small> año</small></span><h3>Baby</h3><p>Primeros pasos, juego sensorial y mucho cariño.</p></div>
+        <div class="lvl b"><span class="age">2<small> años</small></span><h3>Exploradores</h3><p>Lenguaje, movimiento y autonomía.</p></div>
+        <div class="lvl c"><span class="age">3<small> años</small></span><h3>Inicial 3</h3><p>Rutinas, amigos y aprendizaje jugando.</p></div>
+        <div class="lvl d"><span class="age">4–5<small> años</small></span><h3>Inicial 4 y 5</h3><p>Listos para dar el salto al colegio.</p></div>
+      </div>
+      <p class="note">Edades y nombres de aulas por confirmar con el nido.</p>
+    </div>
+  </section>
+
+  <section class="block families" id="familias">
+    <div class="wrap fam reveal">
+      <div class="fam-card sky">
+        <span class="pill" style="background:rgba(255,255,255,.25);color:#fff;justify-self:start">Para las familias</span>
+        <h3>Siempre sabrás cómo le fue a tu peque</h3>
+        <ul>
+          <li>Comunicación frecuente con papás y mamás</li>
+          <li>Horario extendido de 7:00 a 18:00</li>
+          <li>Ideal para familias que trabajan</li>
+        </ul>
+      </div>
+      <div class="fam-card sun">
+        <span class="pill" style="background:rgba(255,255,255,.45);color:#3d2b00;justify-self:start">En el nido</span>
+        <h3>Aprenden, juegan y se divierten</h3>
+        <ul>
+          <li>Estimulación y juego todos los días</li>
+          <li>Aprenden el valor de la amistad</li>
+          <li>Mucho cariño de sus maestras</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="resenas">
+    <div class="wrap">
+      <div class="head">
+        <span class="pill mint">Reseñas en Google · 5,0 ★</span>
+        <h2>Lo que dicen las familias</h2>
+      </div>
+      <div class="rv-grid reveal">
+        <div class="rv"><span class="st" aria-label="5 estrellas">★★★★★</span><p>“Feliz con el cuidado y la estimulación que recibe mi pequeña. Las maestras son maravillosas, las instalaciones muy amplias y bonitas, y la directora un amor.”</p><footer>Mamá en Google</footer></div>
+        <div class="rv"><span class="st" aria-label="5 estrellas">★★★★★</span><p>“Excelentes maestras, muy amorosas con los niños. Comunicación frecuente con los padres. Educan con amor y enseñan el valor de la amistad desde pequeños.”</p><footer>Familia en Google</footer></div>
+        <div class="rv"><span class="st" aria-label="5 estrellas">★★★★★</span><p>“Excelente servicio en cuidado y educación. Muy agradecida por haberles confiado a mi pequeño.”</p><footer>Familia en Google</footer></div>
+      </div>
+      <div class="rate-cta">
+        <a class="stars" href="https://search.google.com/local/writereview?placeid=ChIJdUVsL4vJBZERxHXVcircs_c" target="_blank" rel="noopener" aria-label="Dejar una reseña en Google">★★★★★</a>
+        <p>¿Tu peque va a Villa Patricia? Toca las estrellas y cuéntales a otras familias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block visit" id="visita">
+    <div class="wrap book">
+      <div class="info">
+        <span class="pill mint" style="justify-self:start">Visítanos</span>
+        <h2>Ven a conocer el nido</h2>
+        <p>Agenda una visita y conoce las aulas, a las maestras y nuestra forma de trabajar.</p>
+        <div class="facts">
+          <div class="fact"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Quiquijana 245, San Miguel<small>Lima 15088</small></span></div>
+          <div class="fact"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Lunes a viernes · 7:00 – 18:00<small id="openText">Horario por confirmar</small></span></div>
+          <div class="fact"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></span><span>916 011 158<small>WhatsApp y llamadas</small></span></div>
+        </div>
+        <div class="cta"><a class="btn white sm" href="https://www.google.com/maps/dir/?api=1&destination=Nido%20Villa Patricia&destination_place_id=ChIJdUVsL4vJBZERxHXVcircs_c" target="_blank" rel="noopener">Cómo llegar</a></div>
+      </div>
+      <form class="booker reveal" id="booker" novalidate>
+        <h3>Agenda tu visita</h3>
+        <fieldset class="field">
+          <legend>Edad de tu peque</legend>
+          <div class="chips">
+            <label><input type="radio" name="age" value="1 año" checked><span>1 año</span></label>
+            <label><input type="radio" name="age" value="2 años"><span>2 años</span></label>
+            <label><input type="radio" name="age" value="3 años"><span>3 años</span></label>
+            <label><input type="radio" name="age" value="4–5 años"><span>4–5 años</span></label>
+          </div>
+        </fieldset>
+        <div class="two">
+          <div class="field"><label for="day">Día de la visita</label><input type="date" id="day"></div>
+          <div class="field"><label for="time">Horario</label><select id="time"><option>9:00 a. m.</option><option selected>10:00 a. m.</option><option>11:00 a. m.</option><option>3:00 p. m.</option><option>4:00 p. m.</option></select></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="parent">Tu nombre</label><input type="text" id="parent" placeholder="Ej. Lucía" autocomplete="given-name"></div>
+          <div class="field"><label for="kid">Nombre de tu peque</label><input type="text" id="kid" placeholder="Ej. Mateo"></div>
+        </div>
+        <div class="field"><label>Mensaje que se enviará</label><div class="preview" id="preview" aria-live="polite"></div></div>
+        <a class="btn coral" id="send" href="https://wa.me/51916011158" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          Enviar por WhatsApp
+        </a>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="brand" href="#inicio"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#ffc93d"/><circle cx="17" cy="21" r="3" fill="#2d2a4a"/><circle cx="31" cy="21" r="3" fill="#2d2a4a"/><path d="M15 29c4 5 14 5 18 0" stroke="#2d2a4a" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span><b><span class="c1">Villa</span> <span class="c4">Patricia</span></b><small>Nido y guardería · San Miguel</small></span></a></div>
+      <div><h4>Dirección</h4><p>Quiquijana 245<br>San Miguel, Lima</p></div>
+      <div><h4>Contacto</h4><p><a href="https://wa.me/51916011158" target="_blank" rel="noopener">WhatsApp 916 011 158</a><br>Lun–Vie 7:00–18:00</p></div>
+    </div>
+    <div class="legal"><span>Ilustraciones originales de esta muestra. Aquí irían las fotos del nido.</span><span class="demo">MUESTRA PREPARADA POR ÁLVARO ERAZO PARA NIDO VILLA PATRICIA</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/51916011158" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+(function () {
+  function safe(fn, name) { try { fn(); } catch (e) { if (window.console) console.warn("[villapatricia] " + name, e); } }
+  var PHONE = "51916011158";
+  var DAYS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  function limaNow() { var n = new Date(); return new Date(n.getTime() + n.getTimezoneOffset() * 60000 - 5 * 3600000); }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  var now = limaNow();
+
+  safe(function () {
+    var d = now.getDay(), hr = now.getHours() + now.getMinutes() / 60, open = d >= 1 && d <= 5 && hr >= 7 && hr < 18;
+    document.getElementById("openText").textContent = open ? "Abierto ahora" : "Cerrado ahora · escríbenos y te respondemos";
+  }, "horario");
+
+  safe(function () {
+    var day = document.getElementById("day"), time = document.getElementById("time"), parent = document.getElementById("parent"), kid = document.getElementById("kid");
+    var preview = document.getElementById("preview"), send = document.getElementById("send");
+    var start = new Date(now); start.setDate(start.getDate() + 1); while (start.getDay() === 0 || start.getDay() === 6) start.setDate(start.getDate() + 1);
+    day.min = iso(now); day.value = iso(start);
+    function update() {
+      var p = day.value.split("-"), d = new Date(+p[0], +p[1] - 1, +p[2]);
+      var age = document.querySelector('input[name="age"]:checked').value, who = parent.value.trim(), k = kid.value.trim();
+      var m = "¡Hola, Nido Villa Patricia! 👋 " + (who ? "Soy " + who + ". " : "") + "Me gustaría agendar una visita para conocer el nido" + (k ? " con " + k : "") +
+        ".\n• Edad: " + age + "\n• Día: " + DAYS[d.getDay()] + " " + d.getDate() + "/" + (d.getMonth() + 1) + "\n• Horario: " + time.value + "\nTambién quisiera información sobre la matrícula 2027. ¡Gracias!";
+      preview.textContent = m;
+      send.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(m);
+    }
+    [day, time, parent, kid].forEach(function (el) { el.addEventListener("input", update); el.addEventListener("change", update); });
+    document.querySelectorAll('input[name="age"]').forEach(function (r) { r.addEventListener("change", update); });
+    document.getElementById("booker").addEventListener("submit", function (e) { e.preventDefault(); });
+    update();
+  }, "visita");
+
+  safe(function () {
+    var els = document.querySelectorAll(".reveal"); function show(el) { el.classList.add("in"); }
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }); }, { threshold: 0.05 });
+      els.forEach(function (el) { io.observe(el); });
+    } else { els.forEach(show); }
+    setTimeout(function () { els.forEach(show); }, 6000);
+  }, "reveal");
+})();
+</script>
+</html>
