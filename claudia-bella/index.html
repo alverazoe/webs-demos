@@ -1,0 +1,449 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claudia Bella Beauty Salon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Claudia Bella Beauty Salon en Hialeah, FL: color, cortes, extensiones, uñas y pedicure. 4,9 estrellas en Google. Hablamos español e inglés.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Layout: editorial claro. Crema + rosa terracota + ciruela, serif elegante, imágenes en arco (como los espejos del salón). Carril de 1160px. */
+:root {
+  --cream: #f8f2ea; --paper: #fffdf9; --sand: #efe4d6; --blush: #f3dfd6;
+  --ink: #2b211e; --muted: #75665e; --line: #e4d6c6;
+  --rose: #c2557a; --rose-d: #a33f62; --plum: #1f3b4d; --plum-2: #2a4d63;
+  --gold: #c9a26a;
+  --f-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --f-sans: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--f-sans); font-size: 16.5px; line-height: 1.6; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.kicker { font-size: 12.5px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--rose); }
+h2 { font-family: var(--f-serif); font-weight: 600; font-size: clamp(36px, 5vw, 58px); line-height: 1.02; margin: 12px 0 0; letter-spacing: -.005em; text-wrap: balance; }
+h2 em { font-style: italic; color: var(--rose); font-weight: 500; }
+section.block { padding-block: 88px; }
+.head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px 30px; margin-bottom: 40px; }
+.head p { margin: 0; color: var(--muted); max-width: 44ch; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; font-family: var(--f-sans); font-weight: 500; font-size: 15px; letter-spacing: .04em; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn.plum { background: var(--plum); color: #fbeee8; }
+.btn.plum:hover { background: var(--plum-2); }
+.btn.rose { background: var(--rose); color: #fff; }
+.btn.rose:hover { background: var(--rose-d); }
+.btn.line { border-color: var(--ink); color: var(--ink); }
+.btn.line:hover { background: var(--ink); color: var(--cream); }
+.btn.light { border-color: rgba(251,238,232,.6); color: #fbeee8; }
+.btn.light:hover { background: #fbeee8; color: var(--plum); }
+.btn.sm { min-height: 40px; padding: 0 18px; font-size: 14px; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+
+/* Header */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--cream); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: rgba(248,242,234,.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { text-decoration: none; display: grid; line-height: 1; }
+.brand b { font-family: var(--f-serif); font-style: italic; font-weight: 600; font-size: 34px; letter-spacing: .01em; color: var(--plum); }
+.brand small { font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+nav.links { display: flex; gap: 30px; font-size: 14.5px; }
+nav.links a { text-decoration: none; color: #5b4c45; padding-block: 6px; border-bottom: 1px solid transparent; }
+nav.links a:hover { color: var(--rose); border-color: var(--rose); }
+@media (max-width: 900px) { nav.links { display: none; } }
+
+/* Hero */
+.hero { padding-block: 60px 80px; position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; width: 720px; height: 720px; right: -220px; top: -260px; border-radius: 50%; background: radial-gradient(closest-side, var(--blush), transparent); z-index: -1; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.hero h1 { font-family: var(--f-serif); font-weight: 600; font-size: clamp(48px, 7vw, 92px); line-height: .96; letter-spacing: -.01em; margin: 18px 0 0; }
+.hero h1 em { display: block; font-style: italic; font-weight: 500; color: var(--rose); }
+.hero p.lead { font-size: 18px; color: #5b4c45; max-width: 44ch; margin: 22px 0 30px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.facts { display: flex; flex-wrap: wrap; gap: 0; margin-top: 38px; border-top: 1px solid var(--line); padding-top: 22px; }
+.fact { padding-right: 26px; margin-right: 26px; border-right: 1px solid var(--line); }
+.fact:last-child { border: 0; margin: 0; padding: 0; }
+.fact b { display: block; font-family: var(--f-serif); font-size: 34px; font-weight: 600; line-height: 1; color: var(--plum); }
+.fact b span { font-size: 20px; color: var(--gold); }
+.fact small { color: var(--muted); font-size: 13px; }
+.arch { position: relative; justify-self: end; width: min(100%, 470px); }
+.arch .big { aspect-ratio: 4 / 5; border-radius: 999px 999px 24px 24px; overflow: hidden; box-shadow: 0 30px 60px rgba(75,37,51,.18); }
+.arch .big img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; }
+.arch .small { position: absolute; left: -48px; bottom: 40px; width: 42%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 8px solid var(--cream); box-shadow: 0 18px 40px rgba(75,37,51,.2); }
+.arch .small img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.arch .seal { position: absolute; right: -14px; top: 34px; background: var(--plum); color: #fbeee8; border-radius: 50%; width: 118px; height: 118px; display: grid; place-items: center; text-align: center; font-family: var(--f-serif); font-style: italic; font-size: 17px; line-height: 1.15; padding: 12px; transform: rotate(8deg); box-shadow: 0 14px 30px rgba(75,37,51,.3); }
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 44px; }
+  .arch { justify-self: center; width: min(86%, 400px); }
+  .arch .small { left: -28px; }
+  .arch .seal { right: -10px; width: 100px; height: 100px; font-size: 15px; }
+}
+
+/* Banda laceado */
+.band { background: var(--plum); color: #fbeee8; }
+.band .wrap { display: grid; grid-template-columns: auto 1fr; gap: 28px 44px; align-items: center; padding-block: 52px; }
+.band .lbl { font-family: var(--f-serif); font-size: clamp(30px, 4vw, 44px); line-height: 1.05; font-weight: 600; max-width: 13ch; }
+.band .lbl em { color: #f0b8a8; font-style: italic; font-weight: 500; }
+.band blockquote { margin: 0; font-family: var(--f-serif); font-style: italic; font-size: clamp(20px, 2.3vw, 26px); line-height: 1.4; border-left: 1px solid rgba(251,238,232,.35); padding-left: 32px; }
+.band blockquote footer { font-family: var(--f-sans); font-style: normal; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #e3c3b8; margin-top: 14px; }
+@media (max-width: 860px) { .band .wrap { grid-template-columns: 1fr; } .band blockquote { padding-left: 20px; } }
+
+/* Servicios */
+.svc-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.card { display: grid; grid-template-rows: auto 1fr; background: var(--paper); border-radius: 22px; overflow: hidden; border: 1px solid var(--line); transition: transform .3s ease, box-shadow .3s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(75,37,51,.12); }
+.card .pic { aspect-ratio: 4 / 4.4; overflow: hidden; border-radius: 999px 999px 0 0; margin: 12px 12px 0; }
+.card .pic img { width: 100%; height: 100%; object-fit: cover; }
+.card .body { padding: 18px 20px 22px; display: grid; gap: 6px; align-content: start; }
+.card h3 { margin: 0; font-family: var(--f-serif); font-size: 26px; font-weight: 600; line-height: 1.1; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card a { margin-top: 8px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+.more { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.more span.l { color: var(--muted); font-size: 14px; margin-right: 6px; }
+.more span.c { padding: 8px 16px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 14px; }
+@media (max-width: 980px) { .svc-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .svc-cards { grid-template-columns: 1fr; } .card { grid-template-columns: 120px 1fr; grid-template-rows: auto; } .card .pic { aspect-ratio: auto; height: calc(100% - 24px); margin: 12px 0 12px 12px; border-radius: 999px 999px 16px 16px; } }
+
+/* Reseñas */
+.reviews { background: var(--paper); border-block: 1px solid var(--line); }
+.rv-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+.score { display: grid; gap: 16px; }
+.score .num { display: flex; align-items: baseline; gap: 14px; }
+.score .num b { font-family: var(--f-serif); font-size: 96px; font-weight: 600; line-height: .9; color: var(--plum); }
+.score .num span { color: var(--gold); font-size: 24px; letter-spacing: 3px; }
+.score .num small { display: block; color: var(--muted); font-size: 14px; letter-spacing: 0; }
+.bars { display: grid; gap: 8px; max-width: 380px; }
+.bar { display: grid; grid-template-columns: 26px 1fr 38px; gap: 10px; align-items: center; font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar i { height: 8px; border-radius: 99px; background: var(--sand); overflow: hidden; position: relative; }
+.bar i::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--rose); border-radius: 99px; }
+.bar span:last-child { text-align: right; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.chips span { padding: 6px 14px; border-radius: 999px; background: var(--blush); color: var(--plum); font-size: 14px; }
+.chips span b { font-weight: 600; }
+.quote-card { background: var(--cream); border-radius: 28px; padding: 36px; position: relative; border: 1px solid var(--line); }
+.quote-card::before { content: "“"; position: absolute; top: -18px; left: 28px; font-family: var(--f-serif); font-size: 120px; line-height: 1; color: var(--rose); }
+.quote-card p { margin: 18px 0 18px; font-family: var(--f-serif); font-size: clamp(22px, 2.4vw, 28px); line-height: 1.35; font-style: italic; }
+.quote-card footer { color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.quote-card footer .st { color: var(--gold); letter-spacing: 2px; }
+.leave { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; padding: 20px 22px; border-radius: 22px; background: var(--plum); color: #fbeee8; }
+.leave a.stars { text-decoration: none; font-size: 30px; letter-spacing: 4px; color: #f6c98a; transition: transform .15s; }
+.leave a.stars:hover { transform: scale(1.05); }
+.leave p { margin: 0; flex: 1 1 220px; color: #ecd3ca; font-size: 15px; }
+.leave p b { color: #fff; font-weight: 600; }
+@media (max-width: 900px) { .rv-layout { grid-template-columns: 1fr; } }
+
+/* Reserva */
+.book { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.opt { border-radius: 28px; padding: 32px; display: grid; gap: 16px; align-content: start; }
+.opt.online { background: var(--rose); color: #fff; }
+.opt.online h3, .opt.wa h3 { margin: 0; font-family: var(--f-serif); font-size: 34px; font-weight: 600; line-height: 1.05; }
+.opt.online p { margin: 0; color: #fbe5df; }
+.opt.online .btn { background: #fff; color: var(--rose-d); justify-self: start; }
+.opt.online ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.opt.online li::before { content: "✓  "; font-weight: 700; }
+.opt.wa { background: var(--paper); border: 1px solid var(--line); }
+.opt.wa p { margin: 0; color: var(--muted); }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+select, input[type=text], input[type=date] { width: 100%; min-height: 48px; padding: 0 14px; border-radius: 14px; border: 1px solid var(--line); background: #fff; color: var(--ink); font: inherit; }
+.preview { font-size: 14px; background: #e6f5ea; color: #1f3a29; border-radius: 16px 16px 16px 4px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.warn { display: none; font-size: 14px; color: var(--rose-d); }
+.warn.on { display: block; }
+.opt.wa .btn { justify-self: stretch; }
+@media (max-width: 860px) { .book { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .two { grid-template-columns: 1fr; } .opt { padding: 24px; } }
+
+/* Visita */
+.visit { background: var(--sand); }
+.vis { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.addr { font-family: var(--f-serif); font-size: 32px; font-weight: 600; line-height: 1.1; margin: 12px 0 6px; }
+.small { color: var(--muted); font-size: 14.5px; margin: 0 0 20px; }
+table.hours { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.hours td { padding: 12px 6px; border-bottom: 1px solid #dccab5; }
+.hours td:last-child { text-align: right; }
+.hours tr.today td { color: var(--rose-d); font-weight: 600; }
+.hours tr.closed td:last-child { color: var(--muted); font-style: italic; }
+.open-now { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #b9aa9e; }
+.dot.on { background: #2f9e62; box-shadow: 0 0 0 4px rgba(47,158,98,.2); }
+.mapcard { border-radius: 28px; overflow: hidden; background: var(--paper); border: 1px solid #dccab5; }
+.map { height: 240px; position: relative; background:
+  linear-gradient(8deg, transparent 0 52%, rgba(180,102,90,.35) 52% 54%, transparent 54%),
+  linear-gradient(98deg, transparent 0 40%, rgba(75,37,51,.12) 40% 41.5%, transparent 41.5%),
+  linear-gradient(rgba(75,37,51,.05) 1px, transparent 1px) 0 0 / 28px 28px,
+  linear-gradient(90deg, rgba(75,37,51,.05) 1px, transparent 1px) 0 0 / 28px 28px, #f4ebe0; }
+.map .pin { position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 8px; }
+.map .pin b { font-family: var(--f-serif); font-style: italic; font-size: 20px; color: var(--plum); background: var(--paper); padding: 4px 14px; border-radius: 999px; box-shadow: 0 6px 16px rgba(75,37,51,.15); }
+.map .pin i { width: 18px; height: 18px; border-radius: 50%; background: var(--rose); box-shadow: 0 0 0 8px rgba(180,102,90,.25); }
+.mapcard .info { padding: 22px 24px 26px; display: grid; gap: 14px; }
+@media (max-width: 860px) { .vis { grid-template-columns: 1fr; } }
+
+/* Pie */
+footer.site { background: var(--plum); color: #e3c9bf; padding-block: 44px 100px; font-size: 14px; }
+.foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 26px; }
+.foot .brand b { color: #fbeee8; }
+.foot .brand small { color: #d9b5a9; }
+.foot h4 { margin: 0 0 8px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #fbeee8; font-weight: 600; }
+.foot p { margin: 0; }
+.foot a { text-decoration: none; }
+.foot a:hover { color: #fff; }
+.legal { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(251,238,232,.2); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 12px; }
+.demo { color: #f6c98a; letter-spacing: .12em; }
+@media (max-width: 760px) { .foot { grid-template-columns: 1fr 1fr; } .foot > :first-child { grid-column: span 2; } }
+
+/* Movimiento */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in, .no-js .reveal { opacity: 1; transform: none; }
+.reveal[data-split] { opacity: 1; transform: none; }
+.hero-copy > * { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.hero-copy > *:nth-child(2) { animation-delay: .08s; } .hero-copy > *:nth-child(3) { animation-delay: .16s; } .hero-copy > *:nth-child(4) { animation-delay: .24s; } .hero-copy > *:nth-child(5) { animation-delay: .32s; }
+.arch .big { animation: rise 1.1s .15s cubic-bezier(.2,.7,.2,1) both; }
+.arch .small { animation: rise 1.1s .35s cubic-bezier(.2,.7,.2,1) both; }
+.arch .seal { animation: spinIn 1.2s .5s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(26px); } }
+@keyframes spinIn { from { opacity: 0; transform: rotate(-30deg) scale(.8); } }
+
+.fab { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 8; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #0b2e17; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(75,37,51,.3); text-decoration: none; }
+.fab svg { width: 30px; height: 30px; }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Claudia Bella, inicio"><b>Claudia Bella</b><small>Beauty salon · Hialeah</small></a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#reservar">Reservas</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <a class="btn plum sm" href="#reservar">Reservar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="kicker">W 16th Ave · Hialeah, FL</div>
+        <h1>Color, corte y uñas <em>que enamoran.</em></h1>
+        <p class="lead">Coloristas, estilistas y técnicas de uñas que escuchan lo que quieres. Un salón cálido en Hialeah, con clientas que vuelven desde hace décadas. We speak English &amp; Spanish.</p>
+        <div class="cta">
+          <a class="btn plum" href="#reservar">Reservar cita</a>
+          <a class="btn line" href="tel:+17542849539">Llamar</a>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>4,9 <span>★</span></b><small>372 reseñas en Google</small></div>
+          <div class="fact"><b>7 días</b><small>abierto toda la semana</small></div>
+          <div class="fact"><b>ES · EN</b><small>español e inglés</small></div>
+        </div>
+      </div>
+      <div class="arch">
+        <div class="big"><img src="img/cb-interior.webp" alt="Interior de un salón de belleza con espejos en arco" width="1280" height="854" fetchpriority="high"></div>
+        <div class="small"><img src="img/cb-color.webp" alt="Estilista aplicando color al cabello" loading="lazy"></div>
+        <div class="seal">Color, extensiones y uñas</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="lbl">Clientas que <em>vuelven</em> desde hace 30 años.</div>
+      <blockquote class="reveal">
+        Claudia, Noelia, Lizandra y Darlen: un equipo que te conoce por tu nombre. Por eso hay clientas que llevan décadas confiándoles su pelo y sus uñas.
+        <footer>4,9 estrellas · 372 reseñas en Google</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="block" id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker">Servicios</div><h2>Todo para tu cabello, <em>y un poco más</em></h2></div>
+        <p>Cuéntanos qué buscas y te recomendamos el tratamiento ideal para tu tipo de cabello.</p>
+      </div>
+      <div class="svc-cards reveal">
+        <article class="card"><div class="pic"><img src="img/cb-color.webp" alt="Aplicación de color" loading="lazy" style="object-position:50% 40%"></div><div class="body"><h3>Color y mechas</h3><p>Colorista experta: tintes, mechas y matices a tu medida.</p><a href="#reservar" class="js-svc" data-svc="Color / mechas">Reservar →</a></div></article>
+        <article class="card"><div class="pic"><img src="img/cb-stylist.webp" alt="Estilista peinando a una clienta" loading="lazy" style="object-position:62% 40%"></div><div class="body"><h3>Corte y peinado</h3><p>Cortes, blowout y peinados para cada ocasión.</p><a href="#reservar" class="js-svc" data-svc="Corte / peinado">Reservar →</a></div></article>
+        <article class="card"><div class="pic"><img src="img/cb-hero.webp" alt="Clienta con el pelo recién arreglado" loading="lazy" style="object-position:40% 30%"></div><div class="body"><h3>Extensiones</h3><p>Más largo y volumen con un acabado natural.</p><a href="#reservar" class="js-svc" data-svc="Extensiones">Reservar →</a></div></article>
+        <article class="card"><div class="pic"><img src="img/cb-nails.webp" alt="Manicure con diseño" loading="lazy" style="object-position:50% 45%"></div><div class="body"><h3>Manicure y pedicure</h3><p>Diseños como el cat-eye, hechos con paciencia y detalle.</p><a href="#reservar" class="js-svc" data-svc="Manicure / pedicure">Reservar →</a></div></article>
+      </div>
+      <div class="more"><span class="l">Se habla:</span><span class="c">Español</span><span class="c">English</span></div>
+    </div>
+  </section>
+
+  <section class="block reviews" id="resenas">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker">Reseñas en Google</div><h2>Lo que dicen <em>nuestras clientas</em></h2></div>
+      </div>
+      <div class="rv-layout">
+        <div class="score reveal">
+          <div class="num"><b>4,9</b><div><span>★★★★★</span><small>372 reseñas en Google</small></div></div>
+          <div class="chips"><span>💇‍♀️ Claudia · colorista y estilista</span><span>✂️ Noelia · estilista</span><span>💅 Lizandra · uñas</span><span>💅 Darlen · uñas</span></div>
+          <div class="quote-card" style="margin-top:8px"><p>“She is the absolute best! I’m in love with my hair and the final result exceeded my expectations.”</p><footer><span>Clienta en Google</span><span class="st">★★★★★</span></footer></div>
+        </div>
+        <div class="reveal">
+          <div class="quote-card">
+            <p>“Noelia has always done my hair for the past 30 years and Darlen does my nails, both of them are very professional, I love them.”</p>
+            <footer><span>Clienta en Google</span><span class="st">★★★★★</span></footer>
+          </div>
+          <div class="leave">
+            <a class="stars" href="https://search.google.com/local/writereview?placeid=ChIJfV7yxxC72YgRYvoyXX_laas" target="_blank" rel="noopener" aria-label="Dejar una reseña en Google">★★★★★</a>
+            <p><b>¿Ya nos visitaste?</b> Toca las estrellas y cuéntanos cómo te fue en Google.</p>
+            <a class="btn light sm" href="https://www.google.com/maps/search/?api=1&query=Claudia%20Bella%20Beauty%20Salon&query_place_id=ChIJfV7yxxC72YgRYvoyXX_laas" target="_blank" rel="noopener">Ver en Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="reservar">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="kicker">Reservas</div><h2>Separa tu <em>cita</em></h2></div>
+        <p>Llámanos o déjanos tu mensaje por WhatsApp con el servicio y la hora que prefieres.</p>
+      </div>
+      <div class="book">
+        <div class="opt online reveal">
+          <h3>Llámanos</h3>
+          <p>Te atendemos en español o en inglés.</p>
+          <ul><li>Lun–Vie 9:00–19:00</li><li>Sáb 10:00–19:00</li><li>Dom 10:00–17:30</li></ul>
+          <a class="btn" href="tel:+17542849539">(754) 284-9539</a>
+        </div>
+        <form class="opt wa reveal" id="booker" novalidate>
+          <h3>Consulta por WhatsApp</h3>
+          <p>Ideal si quieres asesoría antes de elegir tratamiento.</p>
+          <div class="field">
+            <label for="svc">Servicio</label>
+            <select id="svc"><option selected>Color / mechas</option><option>Corte / peinado</option><option>Extensiones</option><option>Manicure / pedicure</option></select>
+          </div>
+          <div class="two">
+            <div class="field"><label for="day">Día</label><input type="date" id="day"></div>
+            <div class="field"><label for="time">Hora</label><select id="time"></select></div>
+          </div>
+          <p class="warn" id="warn"></p>
+          <div class="field"><label for="name">Tu nombre</label><input type="text" id="name" placeholder="Ej. Andrea" autocomplete="given-name"></div>
+          <div class="field"><label>Mensaje que se enviará</label><div class="preview" id="preview" aria-live="polite"></div></div>
+          <a class="btn rose" id="send" href="https://wa.me/17542849539" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+            Enviar por WhatsApp
+          </a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="block visit" id="visitanos">
+    <div class="wrap vis">
+      <div>
+        <div class="kicker">Visítanos</div>
+        <p class="addr">3825 W 16th Ave, Ste 8, Hialeah</p>
+        <p class="small">Florida 33012</p>
+        <div class="open-now"><span class="dot" id="dot"></span><span id="openText">Horario de atención</span></div>
+        <table class="hours" id="hours"><tbody>
+          <tr data-d="1"><td>Lunes</td><td>9:00 – 19:00</td></tr>
+          <tr data-d="2"><td>Martes</td><td>9:00 – 19:00</td></tr>
+          <tr data-d="3"><td>Miércoles</td><td>9:00 – 19:00</td></tr>
+          <tr data-d="4"><td>Jueves</td><td>9:00 – 19:00</td></tr>
+          <tr data-d="5"><td>Viernes</td><td>9:00 – 19:00</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>10:00 – 19:00</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>10:00 – 17:30</td></tr>
+        </tbody></table>
+      </div>
+      <div class="mapcard">
+        <div class="map" aria-hidden="true"><div class="pin"><b>Claudia Bella</b><i></i></div></div>
+        <div class="info">
+          <div class="cta">
+            <a class="btn plum sm" href="https://www.google.com/maps/dir/?api=1&destination=Claudia%20Bella%20Beauty%20Salon&destination_place_id=ChIJfV7yxxC72YgRYvoyXX_laas" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn line sm" href="https://wa.me/17542849539" target="_blank" rel="noopener">(754) 284-9539</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="brand" href="#inicio"><b>Claudia Bella</b><small>Beauty salon · Hialeah</small></a><p style="margin-top:12px">Hablamos español e inglés.</p></div>
+      <div><h4>Dirección</h4><p>3825 W 16th Ave, Ste 8<br>Hialeah, FL 33012</p></div>
+      <div><h4>Horario</h4><p>Lun–Vie 9:00–19:00<br>Sáb 10–19 · Dom 10–17:30</p></div>
+      <div><h4>Contacto</h4><p><a href="https://wa.me/17542849539" target="_blank" rel="noopener">WhatsApp (754) 284-9539</a></p></div>
+    </div>
+    <div class="legal"><span>Fotos referenciales vía Wikimedia Commons: bradleypjohnson, Hair Spies, Shixart1985 (CC BY 2.0) y Rohit Verma (CC BY-SA 4.0).</span><span class="demo">MUESTRA PREPARADA POR ÁLVARO ERAZO PARA CLAUDIA BELLA BEAUTY SALON</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/17542849539" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+(function () {
+  function safe(fn, name) { try { fn(); } catch (e) { if (window.console) console.warn("[claudiabella] " + name, e); } }
+  var PHONE = "17542849539";
+  var HOURS = { 0: [10, 17.5], 1: [9, 19], 2: [9, 19], 3: [9, 19], 4: [9, 19], 5: [9, 19], 6: [10, 19] };
+  var DAYS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  function limaNow() { var n = new Date(); return new Date(n.getTime() + n.getTimezoneOffset() * 60000 - 5 * 3600000); }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function nextOpen(d) { var x = new Date(d); for (var i = 0; i < 7; i++) { if (HOURS[x.getDay()]) return x; x.setDate(x.getDate() + 1); } return x; }
+  var now = limaNow(), today = now.getDay(), h = HOURS[today], hr = now.getHours() + now.getMinutes() / 60;
+
+  safe(function () {
+    var row = document.querySelector('#hours tr[data-d="' + today + '"]'); if (row) row.classList.add("today");
+    var open = !!h && hr >= h[0] && hr < h[1], txt;
+    if (open) txt = "Abierto ahora · cierra a las " + h[1] + ":00";
+    else if (h && hr < h[0]) txt = "Cerrado ahora · abre hoy a las " + h[0] + ":00";
+    else { var t = new Date(now); t.setDate(t.getDate() + 1); t = nextOpen(t); txt = "Cerrado ahora · abre el " + DAYS[t.getDay()] + " a las " + HOURS[t.getDay()][0] + ":00"; }
+    document.getElementById("dot").classList.toggle("on", open);
+    document.getElementById("openText").textContent = txt;
+  }, "horario");
+
+  safe(function () {
+    var day = document.getElementById("day"), time = document.getElementById("time"), svc = document.getElementById("svc");
+    var nameI = document.getElementById("name"), preview = document.getElementById("preview"), send = document.getElementById("send"), warn = document.getElementById("warn");
+    var start = new Date(now); if (!h || hr >= h[1] - 1) start.setDate(start.getDate() + 1); start = nextOpen(start);
+    day.min = iso(now); day.value = iso(start);
+    function parseDay() { var p = day.value.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+    function fillTimes() {
+      var r = HOURS[parseDay().getDay()], keep = time.value; time.innerHTML = "";
+      warn.classList.toggle("on", !r); time.disabled = !r;
+      if (!r) { var o0 = document.createElement("option"); o0.textContent = "—"; time.appendChild(o0); return; }
+      for (var t = r[0]; t < r[1]; t += 0.5) { var o = document.createElement("option"); o.value = o.textContent = Math.floor(t) + ":" + (t % 1 ? "30" : "00"); time.appendChild(o); }
+      var has = function (v) { return [].some.call(time.options, function (o) { return o.value === v; }); };
+      time.value = keep && has(keep) ? keep : (has("11:00") ? "11:00" : time.options[0].value);
+    }
+    function update() {
+      var d = parseDay(), who = nameI.value.trim(), closed = !HOURS[d.getDay()];
+      var m = "Hola, Claudia Bella ✨ " + (who ? "Soy " + who + ". " : "") + "Quisiera información y separar una cita:\n• Servicio: " + svc.value +
+        "\n• Día: " + DAYS[d.getDay()] + " " + d.getDate() + "/" + (d.getMonth() + 1) + (closed ? "" : "\n• Hora: " + time.value) + "\n¡Gracias!";
+      preview.textContent = m;
+      send.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(m);
+    }
+    day.addEventListener("change", function () { fillTimes(); update(); });
+    [time, svc, nameI].forEach(function (el) { el.addEventListener("input", update); el.addEventListener("change", update); });
+    document.querySelectorAll(".js-svc").forEach(function (a) { a.addEventListener("click", function () { svc.value = a.getAttribute("data-svc"); update(); }); });
+    document.getElementById("booker").addEventListener("submit", function (e) { e.preventDefault(); });
+    fillTimes(); update();
+  }, "reserva");
+
+  safe(function () {
+    var els = document.querySelectorAll(".reveal"); function show(el) { el.classList.add("in"); }
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }); }, { threshold: 0.05 });
+      els.forEach(function (el) { io.observe(el); });
+    } else { els.forEach(show); }
+    setTimeout(function () { els.forEach(show); }, 6000);
+  }, "reveal");
+})();
+</script>
+</html>
